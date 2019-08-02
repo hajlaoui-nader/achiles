@@ -1,0 +1,44 @@
+name:                achiles
+version:             0.1.0.0
+github:              "https://github.com/hajlaoui-nader/achiles"
+license:             BSD3
+author:              "h.nader"
+maintainer:          "hajlaoui.nader@egmail.com"
+copyright:           "2019 h.nader"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis: This package is a project squeleton with some katas implementations
+category: Learning
+
+description: Please see the README on GitHub at <https://github.com/hajlaoui-nader/achiles#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  achiles-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - achiles
+
+tests:
+  achiles-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - achiles
