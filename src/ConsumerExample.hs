@@ -1,8 +1,6 @@
 {-# LANGUAGE OverloadedStrings   #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-module ConsumerExample
-
-where
+module ConsumerExample where
 
 import Control.Arrow     ((&&&))
 import Control.Exception (bracket)

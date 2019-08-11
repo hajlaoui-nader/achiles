@@ -31,13 +31,20 @@ library
   exposed-modules:
       Lib
       Tautology
+      ConsumerExample
   other-modules:
       Paths_achiles
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5,
-      hw-kafka-client>=2.6.0
+      hw-kafka-client>=2.6.0,
+      bifunctors,
+      bytestring,
+      containers,
+      text,
+      transformers,
+      unix
   default-language: Haskell2010
 
 executable achiles-exe
