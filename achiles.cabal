@@ -37,17 +37,19 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5,
-      hw-kafka-client>=2.6.0,
-      bifunctors,
-      bytestring,
-      containers,
-      text,
-      transformers,
-      unix
+      base >=4.7 && <5
+      , hw-kafka-client>=2.6.0
+      , bifunctors
+      , bytestring
+      , containers
+      , text
+      , transformers
+      , unix
+      , aeson
+      , avro >=0.4
   default-language: Haskell2010
 
-executable achiles-exe
+executable achiles
   main-is: Main.hs
   other-modules:
       Paths_achiles
@@ -56,8 +58,10 @@ executable achiles-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       achiles
-    , base >=4.7 && <5,
-    hw-kafka-client>=2.6.0
+    , base >=4.7 && <5
+    , hw-kafka-client>=2.6.0
+    , aeson
+    , avro >=0.4
   default-language: Haskell2010
 
 test-suite achiles-test
@@ -70,6 +74,8 @@ test-suite achiles-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       achiles
-    , base >=4.7 && <5,
-    hw-kafka-client>=2.6.0
+    , base >=4.7 && <5
+    , hw-kafka-client>=2.6.0
+    , aeson
+    , avro >=0.4
   default-language: Haskell2010
