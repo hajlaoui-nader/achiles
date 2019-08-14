@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d9266cd3373034a8ba4c079925ba3e7e83d56b968c57c69d5932bef124918bf7
+-- hash: 679808b71d95a192acf96d43a91bed1ecc07d19b848ab1740a2af28f15359f07
 
 name:           achiles
 version:        0.1.0.0
@@ -30,15 +30,26 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Tautology
+      ConsumerExample
   other-modules:
       Paths_achiles
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+      , hw-kafka-client>=2.6.0
+      , bifunctors
+      , bytestring
+      , containers
+      , text
+      , transformers
+      , unix
+      , aeson
+      , avro >=0.4
   default-language: Haskell2010
 
-executable achiles-exe
+executable achiles
   main-is: Main.hs
   other-modules:
       Paths_achiles
@@ -48,6 +59,9 @@ executable achiles-exe
   build-depends:
       achiles
     , base >=4.7 && <5
+    , hw-kafka-client>=2.6.0
+    , aeson
+    , avro >=0.4
   default-language: Haskell2010
 
 test-suite achiles-test
@@ -61,4 +75,7 @@ test-suite achiles-test
   build-depends:
       achiles
     , base >=4.7 && <5
+    , hw-kafka-client>=2.6.0
+    , aeson
+    , avro >=0.4
   default-language: Haskell2010
