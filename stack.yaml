@@ -36,6 +36,7 @@ packages:
 #
 extra-deps:
 - hw-kafka-client-2.6.0
+- hw-kafka-avro-4.0.1
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
