@@ -15,11 +15,11 @@ import qualified Data.Avro.Types               as AT
 import           Data.Int
 import           Kafka.Avro
 import           Message
+
 -- Global consumer properties
 consumerProps :: ConsumerProperties
 consumerProps =
-    brokersList
-            [BrokerAddress "livealerting-services-1.prod.eu-west-1.stuart:9092"]
+    brokersList [BrokerAddress "blabla:9092"]
         <> groupId (ConsumerGroupId "consumer_example_group")
         <> noAutoCommit
         <> setCallback (rebalanceCallback printingRebalanceCallback)
