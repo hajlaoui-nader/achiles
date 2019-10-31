@@ -1,5 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Message where
+module Message
+    ( TestMessage(..)
+    )
+where
 
 import           Data.Avro
 import           Data.Avro.Schema
